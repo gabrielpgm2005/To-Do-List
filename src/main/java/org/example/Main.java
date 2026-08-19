@@ -8,7 +8,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner inputScanner = new Scanner(System.in);
-        TaskManager taskManager = new TaskManager("/home/gabriel/Downloads/stock-analysis(1)/first-gradle-project/src/tarefas.csv");
+        String filepath = "/home/gabriel/Downloads/stock-analysis(1)/first-gradle-project/src/tarefas.csv";
+        TaskManager taskManager = new TaskManager(filepath);
         char input = '0';
         //Mostrar tarefas Criar uma tarefa, editar uma tarefa,remover uma tarefa,encerrar programa
         while(input != 'q'){
@@ -17,28 +18,24 @@ public class Main {
             input = inputScanner.nextLine().charAt(0);
             switch (input){
                 case 'm' : {
-                    taskManager.displayAllTasks();
+                    Displayer.displayAllTasks(taskManager,inputScanner);
                     break;
 
                 }
                 case 'c' : {
-                    taskManager.displayCategoryTasks();
-                    break;
-                }
-                case 's' : {
-                    taskManager.displayStatusTasks();
+                    Displayer.displayPerField(taskManager,inputScanner);
                     break;
                 }
                 case 'a' : {
-                    taskManager.addTask();
+                    taskManager.addTask(inputScanner);
                     break;
                 }
                 case 'r' : {
-                    taskManager.removeTask();
+                    taskManager.removeTask(inputScanner);
                     break;
                 }
                 case 'q' : {
-                    taskManager.updateFile();
+                    taskManager.updateFile(filepath);
                     break;
                 }
                 default: {
