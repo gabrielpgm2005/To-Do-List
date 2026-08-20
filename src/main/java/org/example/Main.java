@@ -8,9 +8,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException, InterruptedException {
 
-        String filepath = "/home/gabriel/Downloads/stock-analysis(1)/first-gradle-project/src/tarefas.csv";
+        String filepath = "src/tarefas.csv";
         TaskManager taskManager = new TaskManager(filepath);
         Scanner inputScanner = new Scanner(System.in);
+        Alarme.setarAlarme(taskManager,inputScanner);
         String input = "";
             while (!input.equals("q")) {
                 System.out.println(WelcomeMessage.returnMessage());
