@@ -12,6 +12,7 @@ public class WelcomeMessage {
                          "c -> Listar atividades por um campo especifico\n" +
                          "a -> Adicionar tarefa\n" +
                          "r -> Remover tarefa\n" +
+                         "n -> Lista o número de tarefas por status\n" +
                          "====================================\n";
         return Message;
     }

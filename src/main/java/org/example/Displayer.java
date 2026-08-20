@@ -8,15 +8,15 @@ import java.util.stream.Collectors;
 public class Displayer {
 
     public static void displayAllTasks (TaskManager taskManager,Scanner scanner){
-        char opt = 'a';
+        String opt = "";
 
         for (LinkedHashMap<String, String> stringStringLinkedHashMap : taskManager.taskList) {
 
             System.out.println(stringStringLinkedHashMap);
             System.out.print("Entre com qualquer letra para avançar (q para sair)");
-            opt = scanner.nextLine().charAt(0);
+            opt = scanner.nextLine();
             System.out.println("\n===============================================\n");
-            if (opt == 'q') return;
+            if (opt.equals("q")) return;
         }
     }
 
@@ -40,5 +40,31 @@ public class Displayer {
         for (int i = 0; i < size; i++) {
             System.out.println(result.get(i));
         }
+    }
+
+    public static void displayStatusCount(TaskManager taskManager) throws InterruptedException {
+        int toDo = 0;
+        int doing = 0;
+        int done = 0;
+        String status = "";
+        for(LinkedHashMap<String,String> taskMap : taskManager.taskList){
+            status = taskMap.get("Status");
+            if (status.equals("To Do")){
+                toDo++;
+            }
+            else if (status.equals("Doing")){
+                doing++;
+            }
+            else if (status.equals("Done")){
+                done++;
+            }
+        }
+
+        System.out.println("Número de tasks por status");
+        System.out.println("To Do: "+ toDo);
+        System.out.println("Doing: "+ doing);
+        System.out.println("Done: "+done);
+
+        Thread.sleep(2000);
     }
 }
