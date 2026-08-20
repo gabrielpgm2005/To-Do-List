@@ -11,6 +11,7 @@ public class WelcomeMessage {
                          "m -> Mostrar lista completa de tarefas\n" +
                          "c -> Listar atividades por um campo especifico\n" +
                          "a -> Adicionar tarefa\n" +
+                         "e -> editar uma tarefa\n" +
                          "r -> Remover tarefa\n" +
                          "n -> Lista o número de tarefas por status\n" +
                          "====================================\n";

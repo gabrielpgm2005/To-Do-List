@@ -1,2 +1,50 @@
 Nome,Descrição,Data,Horario,Prioridade,Categoria,Status,Alarme
-
+Estudar Java,Revisar conceitos de orientação a objetos,20/08/26,08:00,3,Estudos,Doing,true
+Fazer exercícios,Resolver exercícios de estrutura de dados,20/08/26,09:30,2,Estudos,To Do,false
+Reunião,Participar da reunião do projeto,20/08/26,10:00,1,Faculdade,Done,true
+Ler livro,Ler vinte páginas do livro atual,20/08/26,11:15,4,Pessoal,To Do,false
+Fazer almoço,Preparar o almoço,20/08/26,12:30,5,Pessoal,Done,false
+Revisar código,Verificar código do projeto Java,20/08/26,14:00,2,Programação,Doing,true
+Fazer commit,Enviar alterações para o repositório,20/08/26,15:20,3,Programação,To Do,true
+Estudar cálculo,Revisar métodos numéricos,20/08/26,16:00,1,Estudos,To Do,false
+Organizar arquivos,Separar documentos da faculdade,20/08/26,17:30,5,Pessoal,Done,false
+Caminhar,Fazer uma caminhada pelo bairro,20/08/26,18:15,4,Saúde,To Do,false
+Estudar SQL,Praticar consultas utilizando PostgreSQL,21/08/26,08:30,2,Estudos,Doing,true
+Corrigir bug,Investigar erro no sistema de alarmes,21/08/26,09:45,1,Programação,To Do,true
+Fazer compras,Comprar alimentos para a semana,21/08/26,11:00,3,Pessoal,To Do,false
+Revisar matéria,Revisar conteúdo da última aula,21/08/26,13:00,2,Faculdade,Done,false
+Implementar função,Criar função para remover tarefas,21/08/26,14:30,1,Programação,Doing,true
+Testar aplicação,Executar testes da aplicação completa,21/08/26,16:00,2,Programação,To Do,true
+Atualizar README,Documentar como executar o projeto,21/08/26,17:15,4,Programação,To Do,false
+Assistir aula,Assistir aula gravada de programação,21/08/26,19:00,3,Estudos,Done,false
+Lavar roupa,Lavar roupas acumuladas,21/08/26,20:30,5,Pessoal,To Do,false
+Estudar threads,Revisar Executor Framework e threads,22/08/26,08:00,1,Estudos,Doing,true
+Criar testes,Criar testes unitários para TaskManager,22/08/26,09:15,2,Programação,To Do,true
+Revisar CSV,Verificar leitura e escrita dos arquivos CSV,22/08/26,10:30,3,Programação,Done,false
+Organizar código,Melhorar organização das classes do projeto,22/08/26,11:45,2,Programação,To Do,false
+Fazer exercícios,Resolver lista de exercícios da faculdade,22/08/26,13:00,1,Faculdade,To Do,true
+Estudar cálculo,Resolver questões de cálculo numérico,22/08/26,14:20,2,Estudos,Doing,true
+Fazer backup,Criar cópia dos arquivos importantes,22/08/26,15:30,4,Pessoal,Done,false
+Limpar projeto,Remover arquivos desnecessários do projeto,22/08/26,16:45,5,Programação,Done,false
+Pesquisar assunto,Pesquisar informações para o trabalho,22/08/26,18:00,3,Faculdade,To Do,true
+Ler documentação,Estudar documentação do Gradle,22/08/26,19:30,2,Programação,To Do,false
+Descansar,Tirar um tempo para descansar,22/08/26,21:00,5,Pessoal,To Do,false
+Implementar filtro,Criar filtro de tarefas por categoria,23/08/26,08:30,2,Programação,Doing,true
+Corrigir interface,Ajustar mensagens exibidas no terminal,23/08/26,09:45,3,Programação,To Do,false
+Estudar estruturas,Revisar LinkedHashMap e ArrayList,23/08/26,11:00,1,Estudos,Doing,true
+Fazer relatório,Escrever relatório do projeto da faculdade,23/08/26,13:30,1,Faculdade,To Do,true
+Revisar backlog,Verificar tarefas planejadas para o projeto,23/08/26,15:00,3,Faculdade,Done,false
+Atualizar projeto,Sincronizar projeto com o GitHub,23/08/26,16:20,2,Programação,To Do,true
+Estudar matemática,Revisar conceitos de probabilidade,23/08/26,17:30,4,Estudos,To Do,false
+Organizar mesa,Organizar materiais de estudo,23/08/26,18:45,5,Pessoal,Done,false
+Fazer jantar,Preparar o jantar,23/08/26,20:00,4,Pessoal,To Do,false
+Revisar projeto,Verificar todas as funcionalidades implementadas,24/08/26,08:00,1,Programação,Doing,true
+Criar documentação,Documentar as principais classes do sistema,24/08/26,09:30,2,Programação,To Do,true
+Executar testes,Executar todos os testes automatizados,24/08/26,11:00,1,Programação,To Do,true
+Estudar sistemas,Revisar conceitos de sistemas operacionais,24/08/26,13:00,2,Estudos,To Do,false
+Fazer exercícios,Resolver exercícios de sistemas operacionais,24/08/26,14:30,3,Estudos,Done,false
+Enviar trabalho,Enviar trabalho da faculdade pela plataforma,24/08/26,16:00,1,Faculdade,To Do,true
+Revisar Git,Praticar comandos de branches e merges,24/08/26,17:15,3,Programação,Doing,false
+Organizar repositório,Reorganizar arquivos do projeto no GitHub,24/08/26,18:30,4,Programação,To Do,false
+Planejar semana,Definir tarefas para os próximos dias,24/08/26,20:00,3,Pessoal,To Do,true
+Dormir cedo,Encerrar atividades e descansar,24/08/26,22:00,5,Pessoal,Doing,false

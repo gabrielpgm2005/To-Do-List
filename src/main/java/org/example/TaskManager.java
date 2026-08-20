@@ -1,6 +1,7 @@
 package org.example;
 
 import java.io.*;
+import java.sql.SQLOutput;
 import java.util.*;
 
 public class TaskManager {
@@ -34,14 +35,11 @@ public class TaskManager {
         }
     }
 
-    //Adicionar tarefas
-    //Achar a posição ideal com base na prioridade
     public void addTask(Scanner scanner){
 
         System.out.println("Nova Tarefa!");
         LinkedHashMap<String,String> taskMap = new LinkedHashMap<>();
         String resposta = "";
-        int size = this.taskList.size();
         int fieldSize = this.fields.length;
         int posicao = 0;
 
@@ -52,20 +50,20 @@ public class TaskManager {
             taskMap.put(fields[i],resposta);
         }
 
-
-        while(posicao < size && Integer.parseInt(taskMap.get("Prioridade")) < Integer.parseInt(this.taskList.get(posicao).get("Prioridade"))){
-            posicao++;
-        }
-
-        if(posicao == 0 && size == 0){
+        if(this.taskList.isEmpty()){
             this.taskList.add(taskMap);
             return;
         }
+
+        while(posicao < this.taskList.size() && Integer.parseInt(taskMap.get("Prioridade")) < Integer.parseInt(this.taskList.get(posicao).get("Prioridade"))){
+            posicao++;
+        }
+
+
         this.taskList.add(posicao,taskMap);
 
     }
 
-    //remover tarefas
     public void removeTask(Scanner scanner){
 
         System.out.println("Entre com o nome da tarefa a ser deletada");
@@ -74,7 +72,26 @@ public class TaskManager {
         this.taskList.removeIf(taskMap -> taskMap.get("Nome").equals(taskToDeleteName));
     }
 
-    //atualizar arquivo
+    public void editTask(Scanner scanner){
+
+        System.out.print("Entre com o nome da task que deseja alterar: ");
+        String name = scanner.nextLine();
+
+        for (LinkedHashMap<String,String> taskMap : this.taskList){
+            if(taskMap.get("Nome").equals(name)){
+                System.out.println("Tarefa Encontrada!");
+                System.out.println(taskMap);
+                System.out.print("Entre com o nome do campo que deseja alterar: ");
+                String key = scanner.nextLine();
+                System.out.print("\nEntre com o nome da chave que irá atualizar esse campo: ");
+                String value = scanner.nextLine();
+                taskMap.replace(key,value);
+                return;
+            }
+        }
+        System.out.println("Tarefa não encontrada!");
+
+    }
     public void updateFile(String filepath){
 
         try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filepath))){
@@ -95,6 +112,6 @@ public class TaskManager {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
+        System.exit(0);
     }
 }

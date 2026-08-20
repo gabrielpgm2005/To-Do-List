@@ -42,6 +42,11 @@ public class Main {
                         Displayer.displayStatusCount(taskManager);
                         break;
                     }
+                    case "e":
+                    {
+                        taskManager.editTask(inputScanner);
+                        break;
+                    }
                     default: {
                         System.out.println("Digite uma opção válida!");
                     }

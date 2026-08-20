@@ -21,5 +21,9 @@ test {
 }
 
 application {
-    mainClass = 'org.Main'
+    mainClass = 'org.example.Main'
+}
+
+run {
+    standardInput = System.in
 }
