@@ -11,7 +11,7 @@ public class Main {
         String filepath = "src/tarefas.csv";
         TaskManager taskManager = new TaskManager(filepath);
         Scanner inputScanner = new Scanner(System.in);
-        Alarme.setarAlarme(taskManager,inputScanner);
+        Alarme.setarAlarme(taskManager);
         String input = "";
             while (!input.equals("q")) {
                 System.out.println(WelcomeMessage.returnMessage());

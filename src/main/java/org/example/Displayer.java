@@ -49,14 +49,16 @@ public class Displayer {
         String status = "";
         for(LinkedHashMap<String,String> taskMap : taskManager.taskList){
             status = taskMap.get("Status");
-            if (status.equals("To Do")){
-                toDo++;
-            }
-            else if (status.equals("Doing")){
-                doing++;
-            }
-            else if (status.equals("Done")){
-                done++;
+            switch (status) {
+                case "To Do":
+                    toDo++;
+                    break;
+                case "Doing":
+                    doing++;
+                    break;
+                case "Done":
+                    done++;
+                    break;
             }
         }
 

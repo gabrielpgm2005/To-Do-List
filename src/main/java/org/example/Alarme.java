@@ -11,9 +11,8 @@ import java.util.concurrent.TimeUnit;
 
 public class Alarme {
 
-    public static void setarAlarme (TaskManager taskManager, Scanner scanner){
+    public static void setarAlarme (TaskManager taskManager){
 
-        String check = "";
         for(LinkedHashMap<String,String> taskMap : taskManager.taskList){
             if(Boolean.parseBoolean(taskMap.get("Alarme"))){
 
