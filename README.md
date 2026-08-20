@@ -1,17 +1,27 @@
-# To-Do-List
+# To-Do List
 
-O arquivo main do programa se chama Main e está em src/main/java/org/example/Main.java
+O arquivo principal do programa, `Main`, está localizado em `src/main/java/org/example/Main.java`.
 
-É possivel rodar o programa direto do terminal na pasta inicial usando o comando:
-```
+É possível executar o programa diretamente pelo terminal, a partir da pasta raiz do projeto, utilizando o comando:
+
+```bash
 ./gradlew run
 ```
-A solução para gerenciar tasks foi feita usando uma lista de LinkedHashMaps, permitindo fácil alteração entre as alterações que uma task pode ter e uma lista para armazenar todo conjunto de tasks.
 
-Após o encerramento do programa *exclusivamente pelo menu pressionando a q* um arquivo csv toma conta de guardar todas as Tasks, e quando o programa for iniciado novamente as Tasks serão lidas desse arquivo.
+## Gerenciamento das tarefas
 
-A partir desse mesmo arquivo .csv tambem é analisado se uma tarefa terá alarme ou não, e caso tenha as própias informações no arquivo controem o tempo que será usado para o Alarme.
+As tarefas são gerenciadas por meio de uma lista de `LinkedHashMaps`. Essa estrutura permite armazenar os diferentes atributos de cada tarefa e facilita a alteração desses dados conforme o estado da tarefa é modificado. Uma lista é utilizada para armazenar o conjunto completo de tarefas.
 
-Nesse sentido vale destacar que sempre ao adicionar uma tarefa, para que ela funcione como alarme o campo de dia deve ser preenchido no formato : __dd/MM/yy__ e as horas no formato __hh:mm__ , além do status de Alarme que deve ser colocado sempre como __true__ ou __false__
+Após o encerramento do programa **exclusivamente pelo menu, utilizando a opção `q`**, todas as tarefas são armazenadas em um arquivo `.csv`. Quando o programa é iniciado novamente, as tarefas são carregadas a partir desse arquivo.
 
-O arquivo .csv já vem com algumas tasks de exemplo de como devem ser usadas, veja elas e as apague para por as suas.
+O mesmo arquivo `.csv` também é utilizado para verificar se uma tarefa possui um alarme. Quando uma tarefa possui um alarme, as informações de data e horário armazenadas no arquivo são utilizadas para construir o momento em que o alarme deverá ser acionado.
+
+## Configuração dos alarmes
+
+Para que uma tarefa funcione corretamente como um alarme, alguns campos devem seguir formatos específicos no momento de sua criação:
+
+* **Data:** deve ser informada no formato `dd/MM/yy`;
+* **Horário:** deve ser informado no formato `HH:mm`;
+* **Alarme:** deve ser preenchido obrigatoriamente com `true` ou `false`.
+
+O arquivo `.csv` já acompanha algumas tarefas de exemplo que demonstram como os dados devem ser preenchidos. Recomenda-se verificar essas tarefas antes de criar as suas próprias e, posteriormente, apagá-las para utilizar apenas as tarefas desejadas.
